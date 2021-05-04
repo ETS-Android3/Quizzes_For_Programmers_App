@@ -4,41 +4,49 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-android:background="@color/black">
+>
 
 
+    <ScrollView
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
 <TextView
-    android:textAlignment="center"
-    android:layout_margin="35dp"
-    android:padding="10dp"
-    android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
     android:layout_height="0dp"
     android:layout_weight="1"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:text="كيف كان شعورك خلال الاسبوعين الماضيين بما في ذلك اليوم؟"
     android:textSize="@dimen/_15ssp"
-    android:textColor="#FFFFFF"
+    android:textColor="@color/quizz_fragment_color"
     android:id="@+id/tvque" />
+    </ScrollView>
 
 
 
 
 
 <RadioGroup
-
-    android:layoutDirection="rtl"
+    android:background="@drawable/question_count"
     android:layout_margin="5dp"
     android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="2"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
     android:id="@+id/answersgrp"
     android:clickable="true">
 
     <RadioButton
-        android:textColor="@color/white"
-        android:buttonTint="#FFEA00"
+        android:layout_margin="@dimen/_5sdp"
+        android:textColor="@color/quizz_fragment_color"
+        android:buttonTint="@color/blue"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -49,8 +57,9 @@ android:background="@color/black">
         />
 
     <RadioButton
-        android:buttonTint="#FFEA00"
-        android:textColor="@color/white"
+        android:layout_margin="@dimen/_5sdp"
+        android:buttonTint="@color/blue"
+        android:textColor="@color/quizz_fragment_color"
         android:textSize="@dimen/_12ssp"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -60,8 +69,9 @@ android:background="@color/black">
         android:checked="false" />
 
     <RadioButton
-        android:buttonTint="#FFEA00"
-        android:textColor="@color/white"
+        android:layout_margin="@dimen/_5sdp"
+        android:buttonTint="@color/blue"
+        android:textColor="@color/quizz_fragment_color"
         android:textSize="@dimen/_12ssp"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -71,9 +81,10 @@ android:background="@color/black">
         android:checked="false" />
 
     <RadioButton
+        android:layout_margin="@dimen/_5sdp"
         android:textSize="@dimen/_12ssp"
-        android:buttonTint="#FFEA00"
-        android:textColor="@color/white"
+        android:buttonTint="@color/blue"
+        android:textColor="@color/quizz_fragment_color"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -83,9 +94,27 @@ android:background="@color/black">
 
 </RadioGroup>
 
-<Button
+
+    <TextView
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/question_count"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Q2 Out of 7"
+        android:layout_weight="0.5"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/quizz_fragment_color"
+        android:id="@+id/qustion_number_tv"/>
+
+
+    <Button
+    android:background="@drawable/buttons"
     android:gravity="center"
-    android:layout_margin="55dp"
+    android:layout_margin="15dp"
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="0.5"
@@ -95,5 +124,4 @@ android:background="@color/black">
     android:textSize="@dimen/_20ssp"
     android:layout_marginTop="27dp"
     android:textColor="#000000"/>
-
 </LinearLayout>

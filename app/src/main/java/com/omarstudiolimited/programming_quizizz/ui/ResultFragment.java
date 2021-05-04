@@ -31,7 +31,7 @@ public class ResultFragment extends Fragment {
         String outmark=getArguments().getString("outmark");
         tvr=(TextView)view.findViewById(R.id.tvr);
         tvr.setText(
-                "Results"+"\n"+"Your Score in "+name+" Quiz is ("+correct_val+") Out of ("+outmark+")"+
+                "Results:"+"\n"+"Your Score in "+name+" Quiz is ("+correct_val+") Out of ("+outmark+")"+
                         "\n"+"Correct answer ("+correct_val+")"+
                         "\n"+"Wrong answer ("+wrong_val+")"
         );

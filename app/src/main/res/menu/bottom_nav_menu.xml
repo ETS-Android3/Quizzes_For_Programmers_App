@@ -7,7 +7,7 @@
     <item
         android:id="@+id/navigation_prog_lang"
         android:icon="@drawable/ic_baseline_code_24"
-        android:title="Types Of Programming Languages"/>
+        android:title="Programming Languages"/>
 </menu>
 
 

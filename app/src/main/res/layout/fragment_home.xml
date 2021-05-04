@@ -5,9 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black">
 
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:weightSum="6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <Button
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/buttons"
         android:id="@+id/java_b"
         android:padding="@dimen/_40sdp"
         android:drawableLeft="@drawable/ic_java"
@@ -19,6 +32,8 @@
         android:textAllCaps="false"/>
 
     <Button
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/buttons"
         android:id="@+id/python_b"
         android:padding="@dimen/_40sdp"
         android:drawableRight="@drawable/ic_python"
@@ -30,14 +45,57 @@
         android:textAllCaps="false"/>
 
     <Button
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/buttons"
         android:padding="@dimen/_40sdp"
-        android:drawableLeft="@drawable/ic_php"
+        android:drawableLeft="@drawable/ic_php__1_"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="PHP Quiz"
         android:textSize="@dimen/_20ssp"
         android:textAllCaps="false"/>
+
+        <Button
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/buttons"
+            android:padding="@dimen/_40sdp"
+            android:drawableRight="@drawable/ic_c"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="C++ Quiz"
+            android:textSize="@dimen/_20ssp"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/buttons"
+            android:padding="@dimen/_40sdp"
+            android:drawableLeft="@drawable/ic_hashtag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="C# Quiz"
+            android:textSize="@dimen/_20ssp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/buttons"
+            android:padding="@dimen/_40sdp"
+            android:drawableRight="@drawable/ic_javascript_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Javascript Quiz"
+            android:textSize="@dimen/_20ssp"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
 
