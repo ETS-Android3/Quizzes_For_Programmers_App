@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,8 @@ public class AboutFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_about, container, false);
         TextView toolbarTextView  = (TextView) ((MainActivity) this.getActivity()).findViewById(R.id.tbtv);
         toolbarTextView.setText("About");
+        ImageView logo_in_tool_bar= (ImageView) ((MainActivity) this.getActivity()).findViewById(R.id.logo);
+        logo_in_tool_bar.setImageDrawable(null);
         return view;
     }
 }

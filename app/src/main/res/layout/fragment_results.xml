@@ -6,15 +6,26 @@
     android:orientation="vertical"
     >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <TextView
+        android:drawablePadding="@dimen/_5sdp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:drawableBottom="@drawable/ic_coding"
+        android:layout_weight="0.5"
+        android:drawableRight="@drawable/ic_coding"
         android:text="Results"
         android:gravity="center"
+        android:layout_margin="@dimen/_5sdp"
         android:textSize="@dimen/_25ssp"
         android:textColor="@color/white"
 
@@ -25,13 +36,44 @@
         android:padding="@dimen/_8sdp"
         android:id="@+id/tvr"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="25dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/buttons"
         android:textColor="@color/white"
-        android:text="xxxxxxxx"
-        android:textSize="@dimen/_25ssp"/>
+        android:textSize="@dimen/_18ssp"/>
+
+            <TextView
+                android:drawableLeft="@drawable/ic_baseline_arrow_downward_24"
+
+                android:drawableRight="@drawable/ic_baseline_arrow_downward_24"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="Correct Answers"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"/>
+
+
+
+            <TextView
+                android:id="@+id/final_answers"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/buttons"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 

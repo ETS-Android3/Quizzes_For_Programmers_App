@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,8 @@ public class Type_Prog_Lang_Fragment extends Fragment {
         view  = inflater.inflate(R.layout.fragment_type_prog_lang, container, false);
         TextView toolbarTextView  = (TextView) ((MainActivity) this.getActivity()).findViewById(R.id.tbtv);
         toolbarTextView.setText("Programming Types");
+        ImageView logo_in_tool_bar= (ImageView) ((MainActivity) this.getActivity()).findViewById(R.id.logo);
+        logo_in_tool_bar.setImageDrawable(null);
         return view;
     }
 }

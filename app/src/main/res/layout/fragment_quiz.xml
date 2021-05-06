@@ -3,39 +3,76 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:orientation="vertical"
->
+android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/question_count"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Q59 Out of 7"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/quizz_fragment_color"
+            android:id="@+id/qustion_number_tv"/>
+
+
+        <Chronometer
+            android:textColor="#E53935"
+            android:layout_margin="@dimen/_5sdp"
+            android:id="@+id/chronometer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_15ssp"
+            android:gravity="center"
+            android:background="@drawable/question_count"/>
+
+
+    </LinearLayout>
 
 
     <ScrollView
+        android:padding="@dimen/_5sdp"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
         android:background="@drawable/question_count"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
-
-<TextView
+        <TextView
     android:padding="@dimen/_10sdp"
     android:layout_gravity="center"
     android:layout_width="wrap_content"
     android:layout_height="0dp"
     android:layout_weight="1"
     android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="كيف كان شعورك خلال الاسبوعين الماضيين بما في ذلك اليوم؟"
+    android:text=""
     android:textSize="@dimen/_15ssp"
     android:textColor="@color/quizz_fragment_color"
     android:id="@+id/tvque" />
     </ScrollView>
 
 
-
-
+<ScrollView
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:background="@drawable/question_count">
 
 <RadioGroup
-    android:background="@drawable/question_count"
-    android:layout_margin="5dp"
+    android:layout_gravity="center"
     android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -48,8 +85,8 @@ android:orientation="vertical"
         android:textColor="@color/quizz_fragment_color"
         android:buttonTint="@color/blue"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:textSize="@dimen/_12ssp"
         android:text="A"
         android:id="@+id/radioButton"
@@ -62,8 +99,8 @@ android:orientation="vertical"
         android:textColor="@color/quizz_fragment_color"
         android:textSize="@dimen/_12ssp"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:text="B"
         android:id="@+id/radioButton2"
         android:checked="false" />
@@ -74,8 +111,8 @@ android:orientation="vertical"
         android:textColor="@color/quizz_fragment_color"
         android:textSize="@dimen/_12ssp"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:text="C"
         android:id="@+id/radioButton3"
         android:checked="false" />
@@ -86,35 +123,19 @@ android:orientation="vertical"
         android:buttonTint="@color/blue"
         android:textColor="@color/quizz_fragment_color"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:text="D"
         android:id="@+id/radioButton4"
         android:checked="false" />
 
 </RadioGroup>
-
-
-    <TextView
-        android:layout_margin="@dimen/_5sdp"
-        android:background="@drawable/question_count"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Q2 Out of 7"
-        android:layout_weight="0.5"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="@dimen/_12ssp"
-        android:textColor="@color/quizz_fragment_color"
-        android:id="@+id/qustion_number_tv"/>
-
+</ScrollView>
 
     <Button
     android:background="@drawable/buttons"
     android:gravity="center"
-    android:layout_margin="15dp"
+    android:layout_margin="@dimen/_5sdp"
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="0.5"
@@ -122,6 +143,5 @@ android:orientation="vertical"
     android:textAllCaps="false"
     android:id="@+id/button3"
     android:textSize="@dimen/_20ssp"
-    android:layout_marginTop="27dp"
-    android:textColor="#000000"/>
+    android:textColor="@color/white"/>
 </LinearLayout>

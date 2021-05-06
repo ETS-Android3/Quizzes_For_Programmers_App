@@ -79,22 +79,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        navView.setOnNavigationItemReselectedListener(item -> {
-            FrameLayout frameLayout = (FrameLayout) findViewById(R.id.nav_host_fragment);
-            switch (item.getItemId()){
-                case R.id.navigation_prog_lang:
-                    frameLayout.removeAllViews();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
-                            new Type_Prog_Lang_Fragment()).commit();
-                    break;
-
-                case R.id.home:
-                    frameLayout.removeAllViews();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
-                            new HomeFragment()).commit();
-                    break;
-            }
-        });
+//        navView.setOnNavigationItemReselectedListener(item -> {
+//            FrameLayout frameLayout = (FrameLayout) findViewById(R.id.nav_host_fragment);
+//            switch (item.getItemId()){
+//                case R.id.navigation_prog_lang:
+//                    frameLayout.removeAllViews();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
+//                            new Type_Prog_Lang_Fragment()).commit();
+//                    break;
+//
+//                case R.id.home:
+//                    frameLayout.removeAllViews();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
+//                            new HomeFragment()).commit();
+//                    break;
+//            }
+//        });
 
     }
 
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.share:
-                Toast.makeText(this, "اختر جهة المشاركة", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "اختر جهة المشاركة", Toast.LENGTH_SHORT).show();
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
                 shareIntent.putExtra(Intent.EXTRA_TEXT,"https://www.google.com/");
