@@ -25,23 +25,14 @@ public class ResultFragment extends Fragment {
 
     String java_questions[] = {
             "Given the string (strawberries) saved in a variable called fruit, what would fruit.substring(2, 5) return?",
-
             "How can you achieve runtime polymorphism in Java?",
-
             "Given the following definitions, which of these expression will NOT evaluate to true? boolean b1 = true, b2 = false; int i1 = 1, i2 = 2;",
-
             "What can you use to create new instances in Java?",
-
             "How do you write a foreach loop that will iterate over ArrayList<Pencil>pencilCase?",
-
             "What code would you use to tell if \"schwifty\" is of type String?",
-
             "What does this code print?",
-
             "By implementing encapsulation, you cannot directly access the class's _ properties unless you are writing code inside the class itself.",
-
             "Which is the most up-to-date way to instantiate the current date?",
-
             "The runtime system starts your program by calling which function first?",
 
     };
@@ -57,20 +48,50 @@ public class ResultFragment extends Fragment {
             "LocalDate.now()",
             "main"
     };
+
+    /////////////////////////////////////////////////////////////////////////////
+    String python_questions[] = {
+            "What is an abstract class?",
+            "What happens when you use the build-in function any() on a list?",
+            "What data structure does a binary tree degenerate to if it isn't balanced properly?",
+            "What statement about static methods is true?",
+            "What are attributes?",
+            "What is the term to describe this code? count, fruit, price = (2, 'apple', 3.5)",
+            "What built-in list method would you use to remove items from a list?",
+            "What is one of the most common use of Python's sys library?",
+            "What is the runtime of accessing a value in a dictionary by using its key?",
+            "What is the correct syntax for defining a class called Game?"
+    };
+    String python_answers[] = {
+            "An abstract class exists only so that other \"concrete\" classes can inherit from the abstract class.",
+            "The any() function returns True if any item in the list evaluates to True. Otherwise, it returns False.",
+            "linked list\n",
+            "Static methods serve mostly as utility methods or helper methods, since they can't access or modify a class's state.",
+            "Attributes are a way to hold data or describe a state for a class or an instance of a class.",
+            "tuple unpacking",
+            "\".pop()\" method",
+            "to capture command-line arguments given at a file's runtime",
+            "O(1), also called constant time.",
+            "class Game: pass"
+    };
+
+//    ========================================================
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_results, container, false);
         TextView toolbarTextView  = (TextView) ((MainActivity) this.getActivity()).findViewById(R.id.tbtv);
         ImageView logo_in_tool_bar= (ImageView) ((MainActivity) this.getActivity()).findViewById(R.id.logo);
-//        toolbarTextView.setText("Results");
-
+        TextView final_answers=(TextView)view.findViewById(R.id.final_answers);
         String name=getArguments().getString("name"); // Means quiz language name
         toolbarTextView.setText(name+" Quiz Results");
-        switch (name){
-            case "Java":
-                logo_in_tool_bar.setImageResource(R.drawable.ic_java);
-        }
+
+//        if (name.equals("Java")){
+//
+//                logo_in_tool_bar.setImageResource(R.drawable.ic_java);
+//        }
         String correct_val=getArguments().getString("correct");
         String wrong_val=getArguments().getString("wrong");
         String outmark=getArguments().getString("outmark");
@@ -85,22 +106,34 @@ public class ResultFragment extends Fragment {
                         "\n"+"You Finished in: ("+timem+") Minutes and ("+times+") Seconds"
         );
 
-        TextView final_answers=(TextView)view.findViewById(R.id.final_answers);
+
         if (name.equals("Java")) {
+            logo_in_tool_bar.setImageResource(R.drawable.ic_java);
             arrss_index = 0;
             question_number = 1;
             for (int i=0;i<java_questions.length;i++){
             final_answers.setText(final_answers.getText()+"\n"+"\n"+
-                    "Q" + question_number + ": " + java_questions[arrss_index] + "\n" + "Answer: " +"\n"+java_answers[arrss_index]
-
-            );
+                    "Q" + question_number + ": " + java_questions[arrss_index] + "\n" + "Answer: " +"\n"+java_answers[arrss_index]);
                 arrss_index++;
                 question_number++;
             }
         }
+
+        if (name.equals("Python")) {
+            logo_in_tool_bar.setImageResource(R.drawable.ic_python);
+            arrss_index = 0;
+            question_number = 1;
+            for (int i=0;i<python_questions.length;i++){
+                final_answers.setText(final_answers.getText()+"\n"+"\n"+
+                        "Q" + question_number + ": " + python_questions[arrss_index] + "\n" + "Answer: " +"\n"+python_answers[arrss_index]);
+                arrss_index++;
+                question_number++;
+            }
+        }
+
         return view;
-    }
-}
+    } // on create end
+} // calss end
 
 
 

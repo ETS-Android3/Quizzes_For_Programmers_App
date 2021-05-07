@@ -22,7 +22,7 @@ public class Type_Prog_Lang_Fragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         view  = inflater.inflate(R.layout.fragment_type_prog_lang, container, false);
         TextView toolbarTextView  = (TextView) ((MainActivity) this.getActivity()).findViewById(R.id.tbtv);
-        toolbarTextView.setText("Programming Types");
+        toolbarTextView.setText("Programming Languages");
         ImageView logo_in_tool_bar= (ImageView) ((MainActivity) this.getActivity()).findViewById(R.id.logo);
         logo_in_tool_bar.setImageDrawable(null);
         return view;

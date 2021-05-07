@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="home_buttons_color">#FFFFFFFF</color>
+
     <color name="appcolor">#025958</color>
+<!--    <color name="appcolor">#9A2A2A</color>-->
+
     <color name="quizz_fragment_color">#FFFFFF</color>
     <color name="blue">#FDD835</color>
 

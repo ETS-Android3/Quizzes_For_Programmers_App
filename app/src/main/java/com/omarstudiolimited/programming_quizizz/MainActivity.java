@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 drawer.openDrawer(GravityCompat.START);
+
             }
         });
 
@@ -123,10 +124,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                Toast.makeText(this, "اختر جهة المشاركة", Toast.LENGTH_SHORT).show();
                 Intent shareIntent = new Intent();
                 shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.putExtra(Intent.EXTRA_TEXT,"https://www.google.com/");
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/apps/details?id=com.omarstudiolimited.programming_quizzes");
                 shareIntent.setType("text/plain");
                 startActivity(Intent.createChooser(shareIntent,"Share"));
                 break;
+
+//            case R.id.navigation_prog_lang:
+//                frameLayout.removeAllViews();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
+//                        new Type_Prog_Lang_Fragment()).addToBackStack(null).commit();
+//                break;
+
         }
         return true;
     }

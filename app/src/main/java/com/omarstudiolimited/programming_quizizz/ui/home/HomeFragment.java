@@ -62,20 +62,15 @@ public class HomeFragment extends Fragment {
         python_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Snackbar.make(view, "Will be Added Soon", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-
-                Toast.makeText(getActivity(), "Will be Added Soon", Toast.LENGTH_SHORT).show();
-//                String key = "Python";
-//                Fragment someFragment = new QuizFragment();
-//                Bundle args = new Bundle();
-//                args.putString("key", key);
-//                someFragment.setArguments(args);
-//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//                transaction.replace(R.id.nav_host_fragment, someFragment ); // give your fragment container id in first parameter
-//                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-//                transaction.commit();
+                String key = "Python";
+                Fragment someFragment = new QuizFragment();
+                Bundle args = new Bundle();
+                args.putString("key", key);
+                someFragment.setArguments(args);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.nav_host_fragment, someFragment ); // give your fragment container id in first parameter
+                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+                transaction.commit();
             }
         });
 
@@ -83,20 +78,18 @@ public class HomeFragment extends Fragment {
         php_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(view, "Will be Added Soon", Snackbar.LENGTH_SHORT)
+                Toast.makeText(getActivity(), "Will Be Added Soon", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Will Be Added Soon", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
-                Toast.makeText(getActivity(), "Will be Added Soon", Toast.LENGTH_SHORT).show();
             }
         });
         Button cxx_p=(Button)view.findViewById(R.id.cxx_b);
         cxx_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(view, "Will be Added Soon", Snackbar.LENGTH_SHORT)
+                Toast.makeText(getActivity(), "Will Be Added Soon", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Will Be Added Soon", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
-                Toast.makeText(getActivity(), "Will be Added Soon", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -104,10 +97,9 @@ public class HomeFragment extends Fragment {
         c_hastag_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(view, "Will be Added Soon", Snackbar.LENGTH_SHORT)
+                Toast.makeText(getActivity(), "Will Be Added Soon", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Will Be Added Soon", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
-                Toast.makeText(getActivity(), "Will be Added Soon", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -115,15 +107,14 @@ public class HomeFragment extends Fragment {
         java_scrpit_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(view, "Will be Added Soon", Snackbar.LENGTH_SHORT)
+                Toast.makeText(getActivity(), "Will Be Added Soon", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Will Be Added Soon", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
-                Toast.makeText(getActivity(), "Will be Added Soon", Toast.LENGTH_SHORT).show();
             }
         });
         return view;
-    }
-    }
+    } // on craete end
+} // Home Class fragment End
 
 
 

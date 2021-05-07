@@ -10,4 +10,6 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="about_text">Programming Quizzes is a simple app that contains a variety of quizzes for different programming languages</string>
 </resources>

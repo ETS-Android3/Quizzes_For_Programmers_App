@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:background="@color/appcolor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,8 +30,6 @@
         android:textColor="@color/white"
 
         />
-
-
     <TextView
         android:padding="@dimen/_8sdp"
         android:id="@+id/tvr"
